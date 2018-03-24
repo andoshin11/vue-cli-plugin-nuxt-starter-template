@@ -1,5 +1,9 @@
 module.exports = {
   /*
+  ** Set source directory
+  */
+  srcDir: 'src/',
+  /*
   ** Headers of the page
   */
   head: {
