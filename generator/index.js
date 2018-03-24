@@ -1,3 +1,27 @@
+const fs = require("fs-extra")
+const path = require("path")
+const dir = __dirname + '/template/'
+
+const walk = (p, fileCallback, errCallback) => {
+  fs.readdir(p, (err, files) => {
+
+    if (err) {
+        errCallback(err)
+        return
+    }
+
+    files.forEach(file => {
+      const fullPath = path.join(p, file)
+
+      if(fs.statSync(fullPath).isDirectory()) {
+        walk(fullPath, fileCallback)
+      } else {
+        fileCallback(fullPath)
+      }
+    })
+  })
+}
+
 module.exports = api => {
   api.extendPackage({
     dependencies: {
@@ -22,19 +46,24 @@ module.exports = api => {
 
   api.render('./template')
 
+  let templates = []
+  const fileCallback = path => {
+    const simplePath = path.replace(dir, "")
+    templates.push(simplePath)
+  }
+  const errCallback = err => console.log("Receive err:" + err)
+
+  walk(dir, fileCallback, errCallback)
+
   api.postProcessFiles(files => {
-    console.log('shin test')
-    const isTS = 'src/main.ts' in files
-    const file = isTS
-      ? 'src/main.ts'
-      : 'src/main.js'
-    const main = files[file]
-    if (main) {
-      // inject import for registerServiceWorker script into main.js
-      const lines = main.split(/\r?\n/g)
-      // const lastImportIndex = lines.findIndex(line => line.match(/^import/))
-      lines[-1] += `\nI'm testing`
-      files[file] = lines.join('\n')
-    }
+    const fileList = Object.keys(files)
+    const srcFileList = fileList.filter(file => /^src\//.test(file))
+    const originals = srcFileList.filter(file => !templates.includes(file) && !/^src\/legacy\//.test(file))
+
+    originals.forEach(file => {
+      const currentPath = api.resolve(file)
+      const newPath = currentPath.replace('/src/', '/src/legacy/')
+      fs.move(currentPath, newPath)
+    })
   })
 }
