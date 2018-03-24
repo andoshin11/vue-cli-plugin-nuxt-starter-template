@@ -1,1 +1,0 @@
-this is a template rendering test
