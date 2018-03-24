@@ -20,5 +20,8 @@
   "homepage": "https://github.com/andoshin11/vue-cli-plugin-nuxt-starter-template#readme",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "fs-extra": "^5.0.0"
   }
 }
