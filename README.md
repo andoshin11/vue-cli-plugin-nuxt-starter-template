@@ -6,7 +6,7 @@ This plugin may cause some issues depending on the combination of your vue-cli s
 Feel free to send any scale of issues. All of your feedbacks are gold to me.
 
 ## Requirements
-- @vue/cli ^3.0.0-beta.6`
+- @vue/cli ^3.0.0-beta.6
 
 ## Quickstart
 - I'm working on publishing this project on npm
@@ -30,5 +30,4 @@ When vue-cli invokes this plugin,
 
 ## TODO
 - Setup CI
-- Add Licence link
-- Publish as npm package
+- Add Test
