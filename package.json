@@ -1,7 +1,7 @@
 {
   "name": "vue-cli-plugin-nuxt-starter-template",
   "version": "0.0.5",
-  "description": "Nuxt.js starter template plugin for vue-cli",
+  "description": "Nuxt.js starter template plugin for vue-cli ^3.0.0~",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "devDependencies": {
+  "dependencies": {
     "fs-extra": "^5.0.0"
   }
 }
