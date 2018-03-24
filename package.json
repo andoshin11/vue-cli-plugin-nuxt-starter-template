@@ -1,11 +1,11 @@
 {
-  "name": "cli-plugin-nuxt-starter-template",
-  "version": "0.0.1",
+  "name": "vue-cli-plugin-nuxt-starter-template",
+  "version": "0.0.2",
   "description": "Nuxt.js starter template plugin for vue-cli",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andoshin11/cli-plugin-nuxt-starter-template.git"
+    "url": "git+https://github.com/andoshin11/vue-cli-plugin-nuxt-starter-template.git"
   },
   "keywords": [
     "vue",
@@ -15,9 +15,9 @@
   "author": "Shin Ando <andoshin11>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/andoshin11/cli-plugin-nuxt-starter-template/issues"
+    "url": "https://github.com/andoshin11/vue-cli-plugin-nuxt-starter-template/issues"
   },
-  "homepage": "https://github.com/andoshin11/cli-plugin-nuxt-starter-template#readme",
+  "homepage": "https://github.com/andoshin11/vue-cli-plugin-nuxt-starter-template#readme",
   "publishConfig": {
     "access": "public"
   }
