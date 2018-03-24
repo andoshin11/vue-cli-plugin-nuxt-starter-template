@@ -9,13 +9,12 @@ Feel free to send any scale of issues. All of your feedbacks are gold to me.
 - @vue/cli ^3.0.0-beta.6
 
 ## Quickstart
-- I'm working on publishing this project on npm
 - I know the package name is way too long. I know...
 
 ``` bash
 $ cd <your vue-cli project path>
 
-$ yarn add -D andoshin11/vue-cli-plugin-nuxt-starter-template
+$ yarn add -D vue-cli-plugin-nuxt-starter-template
 
 $ vue invoke nuxt-starter-template
 ```
