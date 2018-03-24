@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-nuxt-starter-template",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Nuxt.js starter template plugin for vue-cli",
   "main": "index.js",
   "repository": {
