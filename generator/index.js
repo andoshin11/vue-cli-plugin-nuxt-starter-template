@@ -39,7 +39,7 @@ module.exports = api => {
   if (!hasBabelPlugin) {
     api.extendPackage({
       devDependencies: {
-        "@vue/babel-preset-app": "^3.0.0-beta.6"
+        "@vue/babel-preset-app": "^3.0.0-rc.2"
       }
     })
   }
