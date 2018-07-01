@@ -60,10 +60,10 @@ module.exports = api => {
     const srcFileList = fileList.filter(file => /^src\//.test(file))
     const originals = srcFileList.filter(file => !templates.includes(file) && !/^src\/legacy\//.test(file))
 
-    originals.forEach(file => {
-      const currentPath = api.resolve(file)
-      const newPath = currentPath.replace('/src/', '/src/legacy/')
-      fs.move(currentPath, newPath)
+    originals.forEach(path => {
+      newPath = path.replace('src/', 'src/legacy/')
+      files[newPath] = files[path]
+      delete files[path]
     })
   })
 }
