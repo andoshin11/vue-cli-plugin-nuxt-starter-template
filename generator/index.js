@@ -25,7 +25,7 @@ const walk = (p, fileCallback, errCallback) => {
 module.exports = api => {
   api.extendPackage({
     dependencies: {
-      "nuxt": "^1.4.0"
+      "nuxt-edge": "^2.0.0-25506422.d9d2d9e"
     },
     scripts: {
       "dev": "nuxt",
